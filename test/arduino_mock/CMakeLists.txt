@@ -14,4 +14,3 @@ set(ARDUINO_MOCK_INCLUDE_DIRS ${source_dir}/include PARENT_SCOPE)
 
 ExternalProject_Get_Property(arduino_mock binary_dir)
 set(ARDUINO_MOCK_LIBS_DIR ${binary_dir} PARENT_SCOPE)
-
