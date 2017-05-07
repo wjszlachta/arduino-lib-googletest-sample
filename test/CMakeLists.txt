@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 2.8.8)
 project(arduino-mock-test-all)
 
+message("building all tests")
+
 find_package(Threads REQUIRED)
 add_subdirectory(arduino_mock)
 
@@ -10,7 +12,7 @@ include_directories(
     ${ARDUINO_MOCK_LIBS_DIR}/lib/gtest/gtest/src/gtest/googlemock/include
 )
 
-file(GLOB LIB_SRCS "../*.ino")
+file(GLOB LIB_SRCS "../src/*.cpp")
 file(GLOB SRCS "*.cpp")
 add_executable(test-all ${SRCS} ${LIB_SRCS})
 
